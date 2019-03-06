@@ -1,12 +1,16 @@
 <!doctype html>
 <html lang=en>
 <head>
+  <style>
+  body {
+    background-color: Slateblue
+  }
+  </style>
   <meta charset=utf-8>
   <title>Help me choose!</title>
   <link href="./main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <img src="https://images.pexels.com/photos/355952/pexels-photo-355952.jpeg?cs=srgb&dl=analysis-blackboard-board-355952.jpg&fm=jpg" alt="lamp" width="380" height="280">
   <h1> Help me choose between...</h1>
   <div class="inputSection">
     <div class="inputs">
@@ -14,6 +18,21 @@
     </div>
     <button class="addOption">Add</button>
   </div>
+  <div class="resultSection"></div>
   <button>Go!</button>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(function() {
+$('.resultSection').hide()
+
+var add_option = function () {
+  $('.inputs').append('<input></input>')
+}
+
+$('.addOption').click(add_option)
+})
+</script>
+
 </body>
 </html>
